@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include<graphics.h>
+#include<conio.h>
+void putpxl(int x0,int y0,int x, int y )
+{
+ putpixel(x0+x,y +y0,RED);
+ putpixel(x0+y,y0+x,12);
+ putpixel(x0-y,y0+x,14);
+ putpixel(x0-x,y0+y,RED);
+ putpixel(x0-x,y0-y,GREEN);
+ putpixel(x0-y,y0-x,14);
+ putpixel(x0+y,y0-x,15);
+ putpixel(x0+x,y0-y,6);
+}
+
+void solve(int x0, int y0, int r)
+{
+  int di= 0;
+  int x= r, y= 0;
+  di=  1 - r;
+  putpxl(x0, y0,x,y);       //First decision variable finding
+   while(x>=y)
+ {
+
+  if(di<=0)
+ {
+    y+= 1;
+    di+= 2*y +1;
+  }
+  if(di>0)
+  {
+  x-= 1;
+  di-= 2*x +1;
+
+  }
+  putpxl(x0,y0,x,y);
+}
+}
+
+
+int main()
+ {
+ int dx=DETECT,dy,x,y,r,errorcode;
+ initgraph(&dx,&dy,"D:\\TURBOC3\\bgi");
+printf("Enter the x and y co-ordinates: ");
+ scanf("%d %d",&x,&y);
+ printf("Enter the Radius: ");
+ scanf("%d",&r);
+ solve(x,y,r);
+ getch();
+closegraph();
+return 0;
+
+ }
