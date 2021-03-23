@@ -1,0 +1,76 @@
+#include<stdio.h>
+#include<graphics.h>
+#include<conio.h>
+int x1,x2,y1,y2;
+void solve(int m, int dx,int dy)
+{
+  int p1,p2;
+ while(x1!=x2 && y1!=y2)
+ {
+  if(m<1)
+  {
+     p1 = 2*dy - dx;
+     p2 = p1;
+     if(p1< 0)
+     {
+       x1 = x1 + 1;
+       y1 = y1;
+       p1 =p2 + 2*dy;
+     }
+     else if(p1>=0)
+     {
+       x1 = x1 +1;
+       y1 = y1 +1;
+       p1 = p2 + 2*dy - 2*dx;
+     }
+     }
+   else if(m>=1)
+  {
+     p1 = 2*dy - dx;
+     p2 = p1;
+     if(p1<0)
+     {
+       x1 = x1;
+       y1 = y1 + 1;
+       p1 =p2 + 2*dx;
+     }
+     else if(p1>=0)
+     {
+       x1 = x1 +1;
+       y1 = y1 +1;
+       p1 = p2 + 2*dx - 2*dy;
+     }
+     }
+
+ putpixel(x1,y1,MAGENTA);
+//line(x1,y1,x2,y2);
+  }
+}
+
+void find()
+{
+  int m,dx,dy;
+
+  m =  (y2 - y1)/(x2 -x1);
+  dx = x2 -x1;
+  dy = y2 -y1;
+ solve(m,dx,dy);
+
+   }
+
+
+int main()
+{
+int gd=DETECT,gm;
+
+initgraph(&gd,&gm,"D:\\TURBOC3\\bgi");
+printf("Enter the first coordinates: ");
+scanf("%d %d",&x1,&y1);
+printf("Enter the Second coordinates: ");
+scanf("%d %d",&x2,&y2);
+putpixel(x1,y1,MAGENTA);
+find();
+getch();
+closegraph();
+return 0;
+}
