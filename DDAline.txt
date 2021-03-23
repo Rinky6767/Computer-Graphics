@@ -1,0 +1,53 @@
+#include<stdio.h>
+#include<graphics.h>
+#include<conio.h>
+int x1,x2,y1,y2;
+void solve(int m1, int r1,int k1)
+{
+  if(r1>=k1)
+  {
+     r1 = 1;
+     x1  = x1 + r1;
+     y1  = y1 + m1 * r1;
+  }
+ else
+ {
+  k1  = 1;
+  x1  = x1 + (k1/m1);
+  y1 = y1 + k1;
+ }
+
+putpixel(x1,y1,MAGENTA);
+//line(x1,y1,x2,y2);
+
+}
+
+void find()
+{
+  int m,r,k;
+ while(x1!=x2 && y1!=y2)
+ {
+  m =  (y2 - y1)/(x2 -x1);
+  r = x2 -x1;
+  k = y2 -y1;
+ solve(m,r,k);
+ find();
+ }
+}
+
+int main()
+{
+int gd=DETECT,gm;
+
+initgraph(&gd,&gm,"D:\\TURBOC3\\bgi");
+printf("Enter the first coordinates: ");
+scanf("%d %d",&x1,&y1);
+printf("Enter the Second coordinates: ");
+scanf("%d %d",&x2,&y2);
+putpixel(x1,y1,MAGENTA);
+find();
+getch();
+closegraph();
+return 0;
+}
+
