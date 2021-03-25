@@ -14,9 +14,10 @@
 
 • Simple computer graphic programs like Microsoft Paint and PaintShop Pro are based on raster graphics, while more sophisticated programs such as CorelDRAW, AutoCAD, and Adobe Illustrator use vector graphics. 
    
- • If you are willing to know the basic concepts of Computer Graphics you can go through this blog:
+ • If you are willing😍 to know the basic concepts of Computer Graphics🎨🖌️🖼️ you can go through the following blog:
 
 
-  👉 https://computer678computergraphics.blogspot.com/?m=1
+  👇
+  https://computer678computergraphics.blogspot.com/?m=1
  
  
