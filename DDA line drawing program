@@ -2,35 +2,37 @@
 #include<graphics.h>
 #include<conio.h>
 int x1,x2,y1,y2;
-void solve(int m1, int r1,int k1)
+void solve(int m1, int dx1,int dy1)
 {
-  if(r1>=k1)
+  if(dx1>=dy1)
   {
-     r1 = 1;
-     x1  = x1 + r1;
-     y1  = y1 + m1 * r1;
+     dx1 = 1;
+     x1  = x1 + dx1;
+     y1  = y1 + m1 * dx1;
   }
  else
  {
-  k1  = 1;
-  x1  = x1 + (k1/m1);
-  y1 = y1 + k1;
+  dy1  = 1;
+  x1   = x1 + (dy1/m1);
+  y1   = y1 + dy1;
  }
 
 putpixel(x1,y1,MAGENTA);
-//line(x1,y1,x2,y2);
+
 
 }
 
 void find()
 {
-  int m,r,k;
+  int m,dx,dy;
+  m =  (y2 - y1)/(x2 -x1);
+
  while(x1!=x2 && y1!=y2)
  {
-  m =  (y2 - y1)/(x2 -x1);
-  r = x2 -x1;
-  k = y2 -y1;
- solve(m,r,k);
+  
+  dx = x2 -x1;
+  dy = y2 -y1;
+ solve(m,dx,dy);
  find();
  }
 }
