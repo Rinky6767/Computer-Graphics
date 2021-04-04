@@ -1,6 +1,6 @@
 # Computer-Graphics
 
-<image SRC="https://Screenshot_20210325-131610~2.png">
+<image SRC="Screenshot_20210325-131610~2.png">
 
 • The field of computer graphics is a broad and diverse field that exists cross section between computer science and design.
 
