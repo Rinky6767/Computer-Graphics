@@ -10,3 +10,7 @@ int main()
    closegraph();
    return 0;
 }
+
+
+
+Output:  Terminal in graphic mode
