@@ -1,0 +1,37 @@
+// In this Program function used are setbkcolor,setcolor,bar,outtextxy, and settextstyle.
+#include<stdio.h>
+#include<graphics.h>
+#include<conio.h>
+
+int main()
+{
+  int gd=DETECT,gm;
+  int x,y;
+  initgraph(&gd,&gm,"D://TURBOC3//BGI");
+  setbkcolor(YELLOW);
+  setcolor(RED);
+
+ bar(20,400,100,470);
+ outtextxy(20,350,"1990 - 1995");
+
+ bar(150,350,230,470);
+ outtextxy(150,300,"1995 - 2000");
+
+ bar(280,300,360,470);
+ outtextxy(280,250,"2000 - 2005");
+
+ bar(410,200,490,470);
+ outtextxy(410,150,"2005 - 2010");
+
+ bar(540,100,620,470);
+ outtextxy(540,50,"2010 - 2015");
+
+ setcolor(RED);
+ settextstyle(1,HORIZ_DIR,0);
+
+ outtextxy(10,100,"CENSUS OF POPULATION");
+
+  getch();
+  closegraph();
+  return 0;
+}
