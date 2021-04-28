@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<graphics.h>
+#include<conio.h>
+int main()
+{
+  int gd=DETECT, gm;
+  int max, may, maxh, mayh;
+  initgraph(&gd,&gm,"D:\\TURBOC3\\bgi");
+
+   max= getmaxx();
+   may= getmaxy();
+   maxh= max/2;
+   mayh= may/2;
+
+   line(maxh,0,maxh,may);       // Y-axis
+   line(0,mayh,max,mayh);       // X-axis
+
+   circle(100,100,50);
+   outtextxy(100,100,"CIRCLE");
+
+   rectangle(400,100,550,150);
+   outtextxy(450,105,"RECTANGLE");
+
+   ellipse(100,300,0,360,65,30);
+   outtextxy(80,300,"ELLIPSE");
+
+
+   ellipse(500,300,0,180,50,20);
+   outtextxy(400,350,"HALF ELLIPSE");
+
+   getch();
+   closegraph();
+   return 0;
+
+}
