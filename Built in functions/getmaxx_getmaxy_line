@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<conio.h>
+#include<graphics.h>
+
+int main()
+{
+
+  int gd=DETECT,gm;
+  int maxx,maxy;
+
+ initgraph(&gd,&gm,"D:\\TURBOC3\\bgi");
+
+ maxx=getmaxx();
+ maxy=getmaxy();
+
+ line(maxx/2,0,maxx/2,maxy);
+ line(0,maxy/2,maxx,maxy/2);
+
+ getch();
+ closegraph();
+ return 0;
+
+}
