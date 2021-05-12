@@ -10,6 +10,7 @@ int main()
 
  initgraph(&gd,&gm,"D:\\TURBOC3\\bgi");
 
+  setbkcolor(MAGENTA);
  maxx=getmaxx();
  maxy=getmaxy();
 
