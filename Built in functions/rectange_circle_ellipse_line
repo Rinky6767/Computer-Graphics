@@ -6,6 +6,8 @@ int main()
   int gd=DETECT, gm;
   int max, may, maxh, mayh;
   initgraph(&gd,&gm,"D:\\TURBOC3\\bgi");
+    
+   setbkcolor(CYAN);
 
    max= getmaxx();
    may= getmaxy();
