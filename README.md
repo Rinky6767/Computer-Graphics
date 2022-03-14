@@ -21,7 +21,7 @@
  • If you are willing😍 to know the basic concepts of Computer Graphics🎨🖌️🖼️ you can go through the following blog:
 
 
-  👇
+ 
   https://computer678computergraphics.blogspot.com/?m=1
  
  
